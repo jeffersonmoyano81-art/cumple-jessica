@@ -2,14 +2,19 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>🎉 ¡Feliz Cumpleaños, Jessica!</title>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Comic+Neue:wght@700&family=Montserrat:wght@900&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      min-height: 100vh;
+      height: 100vh;
       background: linear-gradient(45deg, #ffafbd, #ffc3a0, #ff6f61, #ffe066, #a29bfe);
       background-size: 400% 400%;
       animation: gradientShift 12s ease infinite;
@@ -22,137 +27,174 @@
       color: white;
       text-align: center;
       position: relative;
+      padding: 20px;
     }
+
     @keyframes gradientShift {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+
     .container {
       z-index: 10;
-      padding: 20px;
-      max-width: 90%;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      max-width: 500px;
+      padding: 10px 15px;
     }
+
     .photo {
-      width: 180px;
-      height: 180px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      border: 5px solid white;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
-      margin: 20px auto;
+      border: 4px solid white;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      margin: 10px auto;
       animation: pulse 2s infinite;
     }
+
     @keyframes pulse {
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.05); }
     }
+
     h1 {
       font-family: 'Fredoka One', cursive;
-      font-size: 3.2rem;
+      font-size: 2.4rem;
       color: #fff;
-      margin-bottom: 10px;
+      margin: 10px 0;
+      line-height: 1.3;
     }
+
     .name {
       color: #ff00aa;
       text-shadow: 0 0 10px #ff00ff;
-      font-size: 3.5rem;
+      font-size: 2.6rem;
       display: block;
     }
+
     .age-container {
       font-family: 'Montserrat', sans-serif;
       font-weight: 900;
-      font-size: 5rem;
+      font-size: 3.5rem;
       color: #fff;
-      text-shadow: 0 0 15px gold, 0 0 25px yellow;
-      margin: 15px 0;
+      text-shadow: 0 0 10px gold, 0 0 20px yellow;
+      margin: 10px 0;
       animation: shine 1.5s infinite;
     }
+
     @keyframes shine {
-      0%, 100% { text-shadow: 0 0 15px gold, 0 0 25px yellow; }
+      0%, 100% { text-shadow: 0 0 10px gold, 0 0 20px yellow; }
       50% { text-shadow: 0 0 20px #ff0, 0 0 40px #f0f, 0 0 60px #0ff; }
     }
+
     p {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       margin: 10px 0;
       opacity: 0;
       animation: fadeInText 2s ease forwards 0.5s;
     }
+
     @keyframes fadeInText {
-      from { opacity: 0; transform: translateY(20px); }
+      from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
     .cake {
-      width: 130px;
-      height: 90px;
+      width: 100px;
+      height: 70px;
       background: #ffebcd;
-      border-radius: 15px 15px 10px 10px;
-      margin: 20px auto;
+      border-radius: 12px 12px 8px 8px;
+      margin: 15px auto;
       position: relative;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       animation: wobble 3s ease-in-out infinite;
     }
+
     @keyframes wobble {
       0%, 100% { transform: rotate(-2deg); }
       50% { transform: rotate(2deg); }
     }
+
     .candle {
-      width: 10px;
-      height: 30px;
+      width: 8px;
+      height: 25px;
       background: #ff69b4;
       margin: 0 auto;
-      border-radius: 5px;
+      border-radius: 4px;
       position: relative;
     }
+
     .flame {
-      width: 8px;
-      height: 15px;
+      width: 6px;
+      height: 12px;
       background: #ffcc00;
       border-radius: 50% 50% 30% 30%;
       position: absolute;
-      top: -10px;
+      top: -8px;
       left: 1px;
       animation: flicker 0.5s ease-in-out infinite alternate;
-      box-shadow: 0 0 10px #ff9900;
+      box-shadow: 0 0 8px #ff9900;
     }
+
     @keyframes flicker {
       0%, 100% { opacity: 1; transform: scaleY(1) scaleX(1); }
       50% { opacity: 0.8; transform: scaleY(1.3) scaleX(0.8); }
     }
+
     .audio-btn {
-      margin-top: 20px;
-      padding: 15px 30px;
-      font-size: 1.4rem;
+      margin: 15px auto;
+      padding: 14px 25px;
+      font-size: 1.3rem;
       font-weight: bold;
       color: white;
       background: linear-gradient(45deg, #ff00aa, #00ffff);
       border: none;
-      border-radius: 60px;
+      border-radius: 50px;
       cursor: pointer;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.4), 0 0 30px rgba(255,255,255,0.5);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4), 0 0 20px rgba(255,255,255,0.5);
       transition: 0.3s;
       animation: pulseBtn 1.5s infinite;
+      display: block;
     }
+
     @keyframes pulseBtn {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); box-shadow: 0 0 50px #ff00ff, 0 0 80px #00ffff; }
+      0% { transform: scale(1); box-shadow: 0 5px 15px rgba(0,0,0,0.4), 0 0 20px rgba(255,255,255,0.5); }
+      50% { transform: scale(1.05); box-shadow: 0 0 30px #ff00ff, 0 0 50px #00ffff; }
       100% { transform: scale(1); }
     }
+
     .audio-btn:hover, .audio-btn:active {
       transform: scale(1.1);
     }
+
     .signature {
       font-family: 'Dancing Script', cursive;
-      font-size: 2rem;
+      font-size: 1.6rem;
       color: #ff69b4;
-      margin-top: 30px;
+      margin-top: 10px;
       opacity: 0;
       animation: fadeInSignature 3s ease forwards 4s;
     }
+
     @keyframes fadeInSignature {
       to { opacity: 1; transform: translateY(0); }
-      from { opacity: 0; transform: translateY(20px); }
+      from { opacity: 0; transform: translateY(10px); }
+    }
+
+    /* Ajuste para pantallas pequeñas */
+    @media (max-height: 700px) {
+      body { padding: 10px; }
+      h1 { font-size: 2.2rem; }
+      .age-container { font-size: 3rem; }
+      p { font-size: 1.3rem; }
+      .cake { width: 90px; height: 65px; }
+    }
+
+    @media (max-height: 600px) {
+      body { overflow-y: auto; } /* Solo si es muy pequeño */
+      .container { padding-bottom: 60px; }
     }
   </style>
 </head>
@@ -162,7 +204,7 @@
   <img src="ale, pau.jpg" alt="Paú y Jessica" class="photo">
 
   <div class="container">
-    <h1>🎉 ¡Feliz Cumpleaños!<br><span class="name">ALE</span> 🎂</h1>
+    <h1>🎉 ¡Feliz Cumpleaños,<br><span class="name">Jessica Alexandra</span>! 🎂</h1>
     
     <div class="age-container">32 🌟</div>
     
@@ -182,7 +224,7 @@
     </div>
   </div>
 
-  <!-- Audio (asegúrate de tener el archivo MP3 en la misma carpeta) -->
+  <!-- Audio -->
   <audio id="bgMusic" loop>
     <source src="feliz_cumple.mp3" type="audio/mpeg">
     Tu navegador no soporta audio.
@@ -200,28 +242,6 @@
           alert("Por favor, inténtalo de nuevo. Necesitamos tu permiso para reproducir sonido.");
         });
     });
-  </script>
-
-  <!-- Animaciones ligeras -->
-  <script>
-    const colors = ['#ff00aa', '#00ffff', '#ffdd00', '#00ff88', '#ff6600'];
-    for (let i = 0; i < 50; i++) {
-      setTimeout(() => {
-        const d = document.createElement('div');
-        d.style.position = 'absolute';
-        d.style.width = '10px';
-        d.style.height = '10px';
-        d.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-        d.style.borderRadius = '50%';
-        d.style.opacity = '0.8';
-        d.style.left = Math.random() * 100 + 'vw';
-        d.style.top = '-10px';
-        d.style.transform = `translateY(${window.innerHeight + 100}px)`;
-        d.style.transition = `transform ${Math.random() * 3 + 3}s linear`;
-        document.body.appendChild(d);
-        setTimeout(() => d.remove(), 5000);
-      }, i * 200);
-    }
   </script>
 
 </body>
